@@ -47,7 +47,7 @@ typedef struct {
 } BRChainParams;
 
 static const char *BRMainNetDNSSeeds[] = {
-    "dnsseed.sumcoinpool.org", "dnsseed.sumcoinwallet.org", NULL
+    "dns0.cryptocashback.io", "cryptocashback.seed.rho.industries", NULL
 };
 
 static const char *BRTestNetDNSSeeds[] = {
@@ -57,12 +57,13 @@ static const char *BRTestNetDNSSeeds[] = {
 // blockchain checkpoints - these are also used as starting points for partial chain downloads, so they must be at
 // difficulty transition boundaries in order to verify the block difficulty at the immediately following transition
 static const BRCheckPoint BRMainNetCheckpoints[] = {
-    {      0, uint256("8f4af36aa0bdb9ae5a34d191bcbd80748569e4ef2e47587f0a3f5749dde17eea"), 1523718257, 0x1e0ffff0 },
-    {  25333, uint256("50c468441ba3f9c52bb150d5f003f4e7681c5e81dbe95be6467a54da34366c56"), 1524886718, 0x1d0d342d },
-    {  50666, uint256("7d79eb15730d115dc3e0677654b7c7a7436b5d881a198d0407c085aa00616adc"), 1526493746, 0x1c1503e5 },
-    {  75999, uint256("fd98ddb372b9248a5685d5e77131fc1f5e14074c727549917068e91ca5d65d67"), 1532015023, 0x1d00a675 },
-    { 101332, uint256("628d0da596ca299bb354dbe717f1755a34c9b800b997b4eccfc8791a5e926726"), 1534137488, 0x1c145140 },
-    { 126665, uint256("04676601e0ae731b8289fb91244ae4507e10d17aa8e6e8141579451de21241bd"), 1536007335, 0x1c0f65ab }
+//    {      0, uint256("8f4af36aa0bdb9ae5a34d191bcbd80748569e4ef2e47587f0a3f5749dde17eea"), 1523718257, 0x1e0ffff0 },
+ //   {  25333, uint256("50c468441ba3f9c52bb150d5f003f4e7681c5e81dbe95be6467a54da34366c56"), 1524886718, 0x1d0d342d },
+//    {  50666, uint256("7d79eb15730d115dc3e0677654b7c7a7436b5d881a198d0407c085aa00616adc"), 1526493746, 0x1c1503e5 },
+//    {  75999, uint256("fd98ddb372b9248a5685d5e77131fc1f5e14074c727549917068e91ca5d65d67"), 1532015023, 0x1d00a675 },
+//    { 101332, uint256("628d0da596ca299bb354dbe717f1755a34c9b800b997b4eccfc8791a5e926726"), 1534137488, 0x1c145140 },
+//    { 126665, uint256("04676601e0ae731b8289fb91244ae4507e10d17aa8e6e8141579451de21241bd"), 1536007335, 0x1c0f65ab }, 
+    NULL
 };
 
 static const BRCheckPoint BRTestNetCheckpoints[] = {
@@ -95,8 +96,8 @@ static int BRTestNetVerifyDifficulty(const BRMerkleBlock *block, const BRSet *bl
 
 static const BRChainParams BRMainNetParams = {
     BRMainNetDNSSeeds,
-    3333,       // standardPort
-    0xfdc2b7d3, // magicNumber
+    11771,       // standardPort
+    0x91c4fde9, // magicNumber
     0,          // services
     BRMainNetVerifyDifficulty,
     BRMainNetCheckpoints,
@@ -105,8 +106,8 @@ static const BRChainParams BRMainNetParams = {
 
 static const BRChainParams BRTestNetParams = {
     BRTestNetDNSSeeds,
-    13333,      // standardPort
-    0xf6c7b4d1, // magicNumber
+    11773,      // standardPort
+    0x477665ba, // magicNumber
     0,          // services
     BRTestNetVerifyDifficulty,
     BRTestNetCheckpoints,
