@@ -39,10 +39,10 @@ extern "C" {
 #endif
 
 // bitcoin address prefixes
-#define BITCOIN_PUBKEY_ADDRESS      63
-#define BITCOIN_SCRIPT_ADDRESS      200
-#define BITCOIN_PUBKEY_ADDRESS_TEST 125
-#define BITCOIN_SCRIPT_ADDRESS_TEST 8
+#define BITCOIN_PUBKEY_ADDRESS      55
+#define BITCOIN_SCRIPT_ADDRESS      13
+#define BITCOIN_PUBKEY_ADDRESS_TEST 139
+#define BITCOIN_SCRIPT_ADDRESS_TEST 19
 
 // bitcoin script opcodes: https://en.bitcoin.it/wiki/Script#Constants
 #define OP_0           0x00
